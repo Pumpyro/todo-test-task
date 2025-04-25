@@ -1,0 +1,34 @@
+.heading {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.todoList {
+  flex: 1;
+  border-right: 1px solid #e5e7eb;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emptyMessage {
+  padding: 16px;
+  text-align: center;
+  color: #6b7280;
+}

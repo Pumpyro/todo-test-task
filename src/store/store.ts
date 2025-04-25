@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import todosReducer from "./todosSlice.js";
-import { localStorageMiddleware } from "./middleware.js";
+import todosReducer from "./todosSlice";
+import { localStorageMiddleware } from "./middleware";
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +10,5 @@ export const store = configureStore({
     getDefaultMiddleware().concat(localStorageMiddleware),
 });
 
-export type AppDispatch = typeof store.getState;
+export type AppDispatch = typeof store.dispatch;
 export type StoreState = ReturnType<typeof store.getState>;
