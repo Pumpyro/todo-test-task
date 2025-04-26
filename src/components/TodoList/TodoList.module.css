@@ -10,12 +10,6 @@
   flex-direction: column;
 }
 
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-  }
-}
-
 .todoList {
   flex: 1;
   border-right: 1px solid #e5e7eb;
@@ -31,4 +25,10 @@
   padding: 16px;
   text-align: center;
   color: #6b7280;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
 }

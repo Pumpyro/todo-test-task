@@ -48,3 +48,12 @@
 .button:active {
   background-color: #1d4ed8;
 }
+
+@media (max-width: 768px) {
+  .inputGroup {
+    flex-direction: column;
+  }
+  .input {
+    width: 200px;
+  }
+}
