@@ -1,0 +1,48 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  position: relative;
+}
+
+.item:hover .actions {
+  opacity: 1;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  accent-color: #2563eb;
+}
+
+.text {
+  flex: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.actions {
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.actionButton {
+  color: #6b7280;
+  padding: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.actionButton:hover {
+  color: #374151;
+}
+
+.icon {
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}

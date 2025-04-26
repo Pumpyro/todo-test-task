@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./TodoForm.module.css";
 import { useAppDispatch } from "../../hooks/hooks";
 import { addTodo } from "../../store/todosSlice";
+import plusIcon from "../../assets/plus.svg";
 
 export const TodoForm = () => {
   const [text, setText] = useState("");
@@ -29,6 +30,7 @@ export const TodoForm = () => {
           className={styles.input}
         />
         <button type="submit" className={styles.button}>
+          <img src={plusIcon} alt="Add todo" width={20} />
           Добавить
         </button>
       </div>
