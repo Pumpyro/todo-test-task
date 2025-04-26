@@ -9,6 +9,8 @@ const todosSlice = createSlice({
   initialState,
   reducers: {
     addTodo: {
+      /**  Разделили на reducer и prepare,
+       * чтобы подогнать payload под нужный формат */
       reducer: (state, action: PayloadAction<Todo>) => {
         state.push(action.payload);
       },
@@ -22,12 +24,14 @@ const todosSlice = createSlice({
         };
       },
     },
+
     toggleTodo: (state, action: PayloadAction<string>) => {
       const todo = state.find((todo) => todo.id === action.payload);
       if (todo) {
         todo.completed = !todo.completed;
       }
     },
+
     removeTodo: (state, action: PayloadAction<string>) => {
       return state.filter((todo) => todo.id !== action.payload);
     },
